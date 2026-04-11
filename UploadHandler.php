@@ -48,6 +48,10 @@ class UploadHandler
         if ($uploadNameHeader) {
             // reverse potential encodeURIComponent from client
             $uploadNameHeader = urldecode($uploadNameHeader);
+            // Normalize to NFC: macOS/Safari may send NFD (e.g. a + combining diaeresis instead of ä)
+            if (class_exists('Normalizer')) {
+                $uploadNameHeader = \Normalizer::normalize($uploadNameHeader, \Normalizer::FORM_C) ?: $uploadNameHeader;
+            }
         }
 
         // Helpers for chunk files
@@ -272,6 +276,13 @@ class UploadHandler
 
     public static function sanitizeFilename($file, $withExtension = false)
     {
+        // Normalize to NFC: macOS/Safari may send filenames in NFD form
+        // (e.g. "a" + combining diaeresis U+0308 instead of the single character "ä" U+00E4).
+        // Without this, strtr() would not match the umlaut map entries and iconv would
+        // silently drop the combining character, producing "a" instead of "ae".
+        if (class_exists('Normalizer')) {
+            $file = \Normalizer::normalize($file, \Normalizer::FORM_C) ?: $file;
+        }
         if ($withExtension) {
             $path_parts = pathinfo($file);
             $ext = isset($path_parts['extension']) ? $path_parts['extension'] : '';
