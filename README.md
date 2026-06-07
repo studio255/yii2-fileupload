@@ -1,8 +1,8 @@
 # yii2-fileupload
 
 [![Packagist Version](https://img.shields.io/packagist/v/studio255/yii2-fileupload?style=flat-square)](https://packagist.org/packages/studio255/yii2-fileupload)
-[![PHP](https://img.shields.io/badge/PHP-%3E%3D%208.1-777BB4?style=flat-square&logo=php&logoColor=white)](https://php.net)
-[![Yii2](https://img.shields.io/badge/Yii2-~2.0.43-ED1E24?style=flat-square)](https://www.yiiframework.com)
+[![PHP](https://img.shields.io/badge/PHP-%3E%3D%208.2-777BB4?style=flat-square&logo=php&logoColor=white)](https://php.net)
+[![Yii2](https://img.shields.io/badge/Yii2-~2.0.51-ED1E24?style=flat-square)](https://www.yiiframework.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-22c55e?style=flat-square)](LICENSE)
 
 [FilePond](https://pqina.nl/filepond/)-based file upload widget for Yii2 — chunked uploads, ActiveRecord binding, and image variants out of the box.
