@@ -1,6 +1,6 @@
 <?php
 
-namespace kasoft\fileupload;
+namespace studio255\fileupload;
 
 use Yii;
 

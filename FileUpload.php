@@ -1,6 +1,6 @@
 <?php
 
-namespace kasoft\fileupload;
+namespace studio255\fileupload;
 
 use yii\base\Widget;
 use yii\helpers\Url;

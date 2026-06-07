@@ -1,6 +1,6 @@
 <?php
 
-namespace kasoft\fileupload;
+namespace studio255\fileupload;
 
 use yii\web\AssetBundle;
 
@@ -19,6 +19,6 @@ class FileUploadAsset extends AssetBundle
     ];
     public $depends = [
         'yii\web\YiiAsset',
-        'kasoft\\fileupload\\FilePondAsset',
+        'studio255\\fileupload\\FilePondAsset',
     ];
 }

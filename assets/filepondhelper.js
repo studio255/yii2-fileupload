@@ -49,7 +49,7 @@
                     return result;
                 }
             } catch (e) {
-                console.warn('[Kasoft FileUpload] URL function failed:', e);
+                console.warn('[FileUpload] URL function failed:', e);
             }
         }
 
@@ -70,7 +70,7 @@
         ensureFilePond(function () {
             var element = typeof elementId === 'string' ? document.getElementById(elementId) : elementId;
             if (!element) {
-                console.error('[Kasoft FileUpload] Element not found:', elementId);
+                console.error('[FileUpload] Element not found:', elementId);
                 return;
             }
 
@@ -138,7 +138,7 @@
 
                 return element._kasoftPond;
             } catch (e) {
-                console.error('[Kasoft FileUpload] Failed to create FilePond instance:', e);
+                console.error('[FileUpload] Failed to create FilePond instance:', e);
             }
 
         });
